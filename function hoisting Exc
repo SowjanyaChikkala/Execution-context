@@ -1,0 +1,14 @@
+function test()                  // var test=fun()
+{                                // {
+a();//aaa                        // var a=fun()
+b();//b is not a function.       // {
+function a()                     // console.log("aaa");
+{                                // }
+console.log("aaa");              // var b=undefined;
+}                                // a();
+var b=function()                 // b();
+{                                // b=fun()
+console.log(b);                  // {
+}                                // console.log(b);
+}                                // }
+test();                          // } test();
