@@ -1,14 +1,17 @@
-function test()                  // var test=fun()
-{                                // {
-a();//aaa                        // var a=fun()
-b();//b is not a function.       // {
-function a()                     // console.log("aaa");
-{                                // }
-console.log("aaa");              // var b=undefined;
-}                                // a();
-var b=function()                 // b();
-{                                // b=fun()
-console.log(b);                  // {
-}                                // console.log(b);
-}                                // }
-test();                          // } test();
+var d=5;                      // var test=fun()
+function test()               // {
+{                             // var one=fun()
+var a=2;                      // { 
+function one()                // var two=fun()
+{                             // {
+var b=3;                      // var c=undefined; c=1;
+two();                        // console.log(a+b+c+d);
+function two()                // }
+{                             // var b=undefined; b=3;
+var c=1;                      // two();
+console.log(a+b+c+d);//11     // }
+}                             // var a=undefined;a=2;
+}                             // one();
+one();                        // }
+}                             // var d=undefined;
+test();                       // d=5; test();
